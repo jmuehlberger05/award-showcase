@@ -1,3 +1,7 @@
+"use client";
+
+import AwardDescription from "@/components/AwardDescription";
+
 export default function Home() {
   return (
     <main className="h-dvh w-full">
@@ -19,12 +23,11 @@ export default function Home() {
       >
         <source src="videos/foreground.webm" type="video/webm" />
       </video>
-      <div className="fixed top-[50dvh] bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent">
-        <div className="absolute left-10 bottom-10 z-100 text-white">
-          <h1 className="text-2xl font-bold ">Früher Vogel des Monats</h1>
-          <p className="text-2xl ">Roman Schacherl</p>
-        </div>
-      </div>
+      <AwardDescription
+        person="Roman Schacherl"
+        title="Früher Vogel des Monats"
+        state="active"
+      />
     </main>
   );
 }
