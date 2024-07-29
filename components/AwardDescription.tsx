@@ -122,7 +122,7 @@ function AwardDescription({ title, person, state }: AwardDescriptionProps) {
     <div>
       <div className="fixed top-[50dvh] bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent">
         <div className="absolute left-10 bottom-10 z-100 text-white">
-          <h1 className="text-4xl font-bold mb-3 " id="title">
+          <h1 className="text-4xl font-bold mb-3" id="title">
             {title}
           </h1>
           <p className="text-4xl" id="person">

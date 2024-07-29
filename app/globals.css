@@ -16,4 +16,8 @@
   body {
     font-family: "Satoshi-Variable", sans-serif;
   }
+
+  .word {
+    @apply opacity-0 translate-y-[100px];
+  }
 }
