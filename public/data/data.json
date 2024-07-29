@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Roman Schacherl",
+    "video": "/videos/roman.webm",
+    "achievementID": 1,
+    "achievementTitle": "Früher Vogel des Monats",
+    "achievementVideo": "/videos/background.mp4",
+    "details": {
+      "title": "Früheste Buchung: 04:30 Uhr"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Micheal Einsiedler",
+    "video": "/videos/roman.webm",
+    "achievementID": 2,
+    "achievementTitle": "Meiste verrechenbaren Stunden",
+    "achievementVideo": "/videos/thumbs.mov",
+    "details": {
+      "title": "160 / 170 Stunden verrechenbar"
+    }
+  }
+]
