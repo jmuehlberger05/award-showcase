@@ -5,13 +5,13 @@ import React, { useEffect } from "react";
 import SplitType from "split-type";
 import { AnimationState } from "../AwardPresentation";
 
-interface AwardDescriptionProps {
+interface SlideUpDescriptionProps {
   title: string;
   person: string;
   state: AnimationState;
 }
 
-function AwardDescription({ title, person, state }: AwardDescriptionProps) {
+function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
   useEffect(() => {
     const title = SplitType.create("#heading");
     const person = SplitType.create("#award");
@@ -39,7 +39,7 @@ function AwardDescription({ title, person, state }: AwardDescriptionProps) {
     );
 
     tl.fromTo(
-      "#award .char",
+      "#award .word",
       {
         opacity: 0,
         y: 100,
@@ -48,8 +48,7 @@ function AwardDescription({ title, person, state }: AwardDescriptionProps) {
         opacity: 1,
         y: 0,
         ease: "power4.out",
-        duration: 0,
-        stagger: 0.1,
+        stagger: 0.2,
       }
     );
 
@@ -106,4 +105,4 @@ function AwardDescription({ title, person, state }: AwardDescriptionProps) {
   );
 }
 
-export default AwardDescription;
+export default SlideUpDescription;
