@@ -1,24 +1,13 @@
 [
   {
-    "id": 1,
-    "name": "Roman Schacherl",
-    "video": "/videos/roman.webm",
-    "achievementID": 1,
-    "achievementTitle": "Früher Vogel des Monats",
-    "achievementVideo": "/videos/background.mp4",
-    "details": {
-      "title": "Früheste Buchung: 04:30 Uhr"
-    }
-  },
-  {
     "id": 2,
-    "name": "Micheal Einsiedler",
-    "video": "/videos/roman.webm",
+    "name": "Kathi",
+    "video": "/videos/kathi_test.webm",
     "achievementID": 2,
-    "achievementTitle": "Meiste verrechenbaren Stunden",
-    "achievementVideo": "/videos/thumbs.mov",
+    "achievementTitle": "Nachteule des Monats",
+    "achievementVideo": "/videos/stock/owl.mp4",
     "details": {
-      "title": "160 / 170 Stunden verrechenbar"
+      "title": "Späeste Zeitbuchung: 01:00 Uhr"
     }
   }
 ]

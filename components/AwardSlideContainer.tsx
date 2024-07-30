@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import AwardDescription from "./AwardDescription";
 import AwardSlide from "./AwardSlide";
 import { AnimationState, AwardDataDTO } from "./AwardPresentation";
+import SlideUpDescription from "./description/SlideUpDescription";
 
 function AwardSlideContainer({
   data,
@@ -13,12 +14,12 @@ function AwardSlideContainer({
   animationState: AnimationState;
 }) {
   return (
-    <div className="h-dvh w-full relative">
+    <div className="h-dvh w-full relative overflow-hidden isolate">
       <AwardSlide
         foregroundVideoUrl={data.video}
         backgroundVideoUrl={data.achievementVideo}
       />
-      <AwardDescription
+      <SlideUpDescription
         person={data.name}
         title={data.achievementTitle}
         state={animationState}
