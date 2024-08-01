@@ -4,83 +4,34 @@ import gsap from "gsap";
 import React, { useEffect } from "react";
 import SplitType from "split-type";
 import { AnimationState } from "../HeroPresentation";
+import { toKebabCase } from "@/app/lib/util/stringFunctions";
 
 interface SlideUpDescriptionProps {
   title: string;
-  person: string;
+  titleId: string;
+  titleSplit: SplitType;
+  hero: string;
+  heroId: string;
+  heroSplit: SplitType;
   state: AnimationState;
 }
 
-function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
+function SlideUpDescription({
+  title,
+  titleId,
+  titleSplit,
+  hero,
+  heroId,
+  heroSplit,
+  state,
+}: SlideUpDescriptionProps) {
   useEffect(() => {
-    const title = SplitType.create("#heading");
-    const person = SplitType.create("#Hero");
-  }, []);
+    if (!titleSplit || !heroSplit) return;
 
-  useEffect(() => {
-    var tl = gsap.timeline({
-      repeat: -1,
-    });
-
-    tl.fromTo(
-      "#heading .word",
-      {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        ease: "power4.out",
-        duration: 1,
-        stagger: 0.1,
-      }
-    );
-
-    tl.fromTo(
-      "#Hero .word",
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        ease: "power4.out",
-        stagger: 0.2,
-      }
-    );
-
-    tl.fromTo(
-      "#heading .word",
-      {
-        opacity: 1,
-        y: 0,
-      },
-      {
-        opacity: 0,
-        y: -100,
-        ease: "power4.out",
-        stagger: 0.1,
-        delay: 3,
-      }
-    );
-
-    tl.fromTo(
-      "#Hero .word",
-      {
-        opacity: 1,
-        y: 0,
-      },
-      {
-        opacity: 0,
-        y: -100,
-        ease: "power4.out",
-        stagger: 0.1,
-      }
-    );
-  }, []);
+    // var tl = gsap.timeline({
+    //   repeat: -1,
+    // });
+  }, [titleSplit, heroSplit]);
 
   return (
     <div>
@@ -89,14 +40,14 @@ function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
           <div className="overflow-hidden absolute left-10 bottom-10 z-100">
             <h1
               className="text-[12vw] font-bold mb-3 leading-[1] z-100"
-              id="heading"
+              id={heroId}
             >
-              {person}
+              {hero}
             </h1>
           </div>
         </div>
         <div className="overflow-hidden absolute left-0 top-0 w-full h-full grid place-content-center z-10">
-          <p className="text-4xl w-fit" id="Hero">
+          <p className="text-4xl w-fit" id={titleId}>
             {title}
           </p>
         </div>

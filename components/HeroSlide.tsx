@@ -6,66 +6,16 @@ import gsap from "gsap";
 interface HeroSlideProps {
   foregroundVideoUrl: string;
   backgroundVideoUrl: string;
+  foregroundVideoRef: React.RefObject<HTMLVideoElement>;
+  backgroundVideoRef: React.RefObject<HTMLVideoElement>;
 }
 
-function HeroSlide({ foregroundVideoUrl, backgroundVideoUrl }: HeroSlideProps) {
-  const foregroundVideoRef = React.useRef<HTMLVideoElement>(null);
-  const backgroundVideoRef = React.useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    var tl = gsap.timeline({
-      repeat: -1,
-      onRepeat: onTimeLineStart,
-      onStart: onTimeLineStart,
-    });
-
-    tl.fromTo(
-      "#foregroundVideo",
-      {
-        y: "100%",
-      },
-      {
-        y: 0,
-        ease: "power4.out",
-        duration: 2,
-      }
-    );
-
-    tl.tl.fromTo(
-      "#foregroundVideo",
-      {
-        opacity: 1,
-      },
-      {
-        opacity: 1,
-        duration: 2,
-      }
-    );
-  }, []);
-
-  const onTimeLineStart = () => {
-    console.log("Timeline started");
-
-    if (backgroundVideoRef.current) {
-      backgroundVideoRef.current.currentTime = 0;
-      backgroundVideoRef.current.play();
-    }
-
-    if (foregroundVideoRef.current) {
-      foregroundVideoRef.current.pause();
-      foregroundVideoRef.current.currentTime = 0;
-      foregroundVideoRef.current.play();
-    }
-  };
-
-  const onTimeLineEnd = () => {
-    console.log("Timeline ended");
-
-    if (backgroundVideoRef.current) {
-      backgroundVideoRef.current.pause();
-    }
-  };
-
+function HeroSlide({
+  foregroundVideoUrl,
+  backgroundVideoUrl,
+  foregroundVideoRef,
+  backgroundVideoRef,
+}: HeroSlideProps) {
   return (
     <div>
       <video
