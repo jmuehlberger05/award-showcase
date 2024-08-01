@@ -1,9 +1,9 @@
-import AwardPresentation from "@/components/AwardPresentation";
+import HeroPresentation from "@/components/HeroPresentation";
 
 export default function Home() {
   return (
     <main>
-      <AwardPresentation dataURL="/data/data.json" />
+      <HeroPresentation dataURL="/data/data.json" />
     </main>
   );
 }

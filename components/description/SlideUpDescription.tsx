@@ -3,7 +3,7 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
 import SplitType from "split-type";
-import { AnimationState } from "../AwardPresentation";
+import { AnimationState } from "../HeroPresentation";
 
 interface SlideUpDescriptionProps {
   title: string;
@@ -14,7 +14,7 @@ interface SlideUpDescriptionProps {
 function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
   useEffect(() => {
     const title = SplitType.create("#heading");
-    const person = SplitType.create("#award");
+    const person = SplitType.create("#Hero");
   }, []);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
     );
 
     tl.fromTo(
-      "#award .word",
+      "#Hero .word",
       {
         opacity: 0,
         y: 100,
@@ -68,7 +68,7 @@ function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
     );
 
     tl.fromTo(
-      "#award .word",
+      "#Hero .word",
       {
         opacity: 1,
         y: 0,
@@ -96,7 +96,7 @@ function SlideUpDescription({ title, person, state }: SlideUpDescriptionProps) {
           </div>
         </div>
         <div className="overflow-hidden absolute left-0 top-0 w-full h-full grid place-content-center z-10">
-          <p className="text-4xl w-fit" id="award">
+          <p className="text-4xl w-fit" id="Hero">
             {title}
           </p>
         </div>

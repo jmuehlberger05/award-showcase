@@ -7,7 +7,18 @@
     "achievementTitle": "Nachteule des Monats",
     "achievementVideo": "/videos/stock/owl.mp4",
     "details": {
-      "title": "Späeste Zeitbuchung: 01:00 Uhr"
+      "title": "Späteste Zeitbuchung: 01:00 Uhr"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Fabian",
+    "video": "/videos/fabian_test2.webm",
+    "achievementID": 2,
+    "achievementTitle": "Frühester Vogel",
+    "achievementVideo": "/videos/stock/bird.mp4",
+    "details": {
+      "title": "Frühste Zeitbuchung: 06:00 Uhr"
     }
   }
 ]
