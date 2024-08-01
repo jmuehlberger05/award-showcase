@@ -46,10 +46,12 @@ function SlideUpDescription({
             </h1>
           </div>
         </div>
-        <div className="overflow-hidden absolute left-0 top-0 w-full h-full grid place-content-center z-10">
-          <p className="text-4xl w-fit" id={titleId}>
-            {title}
-          </p>
+        <div className="absolute left-0 top-0 w-full h-full grid place-content-center z-10">
+          <div className="overflow-hidden">
+            <p className="text-[5vw] w-fit" id={titleId}>
+              {title}
+            </p>
+          </div>
         </div>
       </div>
     </div>

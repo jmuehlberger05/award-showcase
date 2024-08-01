@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Kathi",
-    "video": "/videos/kathi_test.webm",
-    "achievementID": 1,
-    "achievementTitle": "Nachteule des Monats",
-    "achievementVideo": "/videos/stock/owl.mp4",
-    "details": {
-      "title": "Späteste Zeitbuchung: 01:00 Uhr"
-    }
-  },
-  {
     "id": 2,
     "name": "Fabian",
     "video": "/videos/fabian_test2.webm",
@@ -19,6 +8,17 @@
     "achievementVideo": "/videos/stock/bird.mp4",
     "details": {
       "title": "Frühste Zeitbuchung: 06:00 Uhr"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Kathi",
+    "video": "/videos/kathi_test.webm",
+    "achievementID": 1,
+    "achievementTitle": "Nachteule des Monats",
+    "achievementVideo": "/videos/stock/owl.mp4",
+    "details": {
+      "title": "Späteste Zeitbuchung: 01:00 Uhr"
     }
   }
 ]

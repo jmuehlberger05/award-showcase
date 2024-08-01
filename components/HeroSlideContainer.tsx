@@ -68,12 +68,12 @@ function HeroSlideContainer({
       "#foregroundVideo",
       {
         y: "100%",
-        delay: 0,
+        delay: 0.5,
       },
       {
         y: 0,
         ease: "power3.inOut",
-        delay: 0,
+        delay: 0.5,
         duration: 2,
       }
     );
@@ -132,6 +132,14 @@ function HeroSlideContainer({
         stagger: 0.1,
       }
     );
+
+    // * Start Step 3 -> Animate Foreground Video out
+    tl.to("#foregroundVideo", {
+      y: "100%",
+      ease: "power3.inOut",
+      delay: -0.5,
+      duration: 1,
+    });
   };
 
   const onTimeLineStart = () => {
@@ -148,7 +156,7 @@ function HeroSlideContainer({
 
       setTimeout(() => {
         if (foregroundVideoRef.current) foregroundVideoRef.current.play();
-      }, 2000);
+      }, 2500);
     }
   };
 
