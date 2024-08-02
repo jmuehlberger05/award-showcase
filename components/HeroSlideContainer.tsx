@@ -4,23 +4,30 @@ import React, { useEffect, useRef, useState } from "react";
 import { AnimationState, HeroDataDTO } from "./HeroPresentation";
 import SlideUpDescription from "./description/SlideUpDescription";
 import HeroSlide from "./HeroSlide";
-import gsap, { SteppedEase } from "gsap";
+import gsap from "gsap";
 import SplitType from "split-type";
 import { toKebabCase } from "@/app/lib/util/stringFunctions";
-import { start } from "repl";
 
 function HeroSlideContainer({
   data,
   animationState,
+  slideID,
+  onCurrentSlideEnd,
+  // timeline,
 }: {
   data: HeroDataDTO;
   animationState: AnimationState;
+  slideID: number;
+  onCurrentSlideEnd: (slideID: number) => void;
+  // timeline: gsap.core.Timeline;
 }) {
   const foregroundVideoRef = useRef<HTMLVideoElement>(null);
   const backgroundVideoRef = useRef<HTMLVideoElement>(null);
 
   const [splitTitle, setSplitTitle] = useState<SplitType | null>(null);
   const [splitHero, setSplitHero] = useState<SplitType | null>(null);
+
+  const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
 
   const stepDurations = {
     step1: 2,
@@ -35,16 +42,21 @@ function HeroSlideContainer({
     title: SplitType;
     hero: SplitType;
   }) => {
+    // timeline.onStart = onTimeLineStart;
+    // timeline.onComplete = onTimeLineEnd;
     var tl = gsap.timeline({
-      repeat: -1,
-      onRepeat: onTimeLineStart,
+      // repeat: -1,
+      // repeatDelay: 1,
       onStart: onTimeLineStart,
+      onComplete: onTimeLineEnd,
     });
 
     tl.set(hero!.words, {
       opacity: 0,
       y: 100,
     });
+
+    tl.pause();
 
     // * Start Step 1 -> Animate Title in
     tl.fromTo(
@@ -63,37 +75,38 @@ function HeroSlideContainer({
       }
     );
 
-    // * Start Step 2 -> Animate Foreground Video in
-    tl.fromTo(
-      "#foregroundVideo",
-      {
-        y: "100%",
-        delay: 0.5,
-      },
-      {
-        y: 0,
-        ease: "power3.inOut",
-        delay: 0.5,
-        duration: 2,
-      }
-    );
-
-    // * End Step 1 -> Animate Title put
+    // * End Step 1 -> Animate Title out
     tl.fromTo(
       title!.words,
-
       {
         opacity: 1,
         y: 0,
-        delay: -2,
+        delay: 1,
       },
       {
         opacity: 0,
-        delay: -2,
+        delay: 1,
         duration: 1,
         y: -100,
         ease: "power3.inOut",
         stagger: 0.1,
+        onComplete: startForegroundVideo,
+      }
+    );
+
+    // * Start Step 2 -> Animate Foreground Video in
+    tl.fromTo(
+      foregroundVideoRef.current,
+      {
+        y: "100%",
+        delay: -1,
+        duration: 2,
+      },
+      {
+        y: 0,
+        ease: "power3.inOut",
+        delay: -1,
+        duration: 2,
       }
     );
 
@@ -102,14 +115,14 @@ function HeroSlideContainer({
       hero!.words,
       {
         opacity: 0,
-        delay: -2.1,
+        delay: -0.1,
         duration: 1.5,
         y: 100,
       },
       {
         opacity: 1,
         y: 0,
-        delay: -2.1,
+        delay: -0.1,
         duration: 1.5,
         ease: "power3.inOut",
         stagger: 0.2,
@@ -134,50 +147,81 @@ function HeroSlideContainer({
     );
 
     // * Start Step 3 -> Animate Foreground Video out
-    tl.to("#foregroundVideo", {
+    tl.to(foregroundVideoRef.current, {
       y: "100%",
       ease: "power3.inOut",
       delay: -0.5,
       duration: 1,
+      onComplete: stopForegroundVideo,
     });
+
+    setTimeline(tl);
   };
 
+  const startTimeLine = () => {
+    timeline?.time(0);
+    timeline?.resume();
+  };
+
+  useEffect(() => {
+    if (animationState === "active") {
+      console.log("Starting Timeline", slideID);
+
+      setTimeout(startTimeLine, 50);
+    }
+  }, [animationState, timeline]);
+
+  // * Start Foreground Video
+  const startForegroundVideo = () => {
+    if (foregroundVideoRef.current) {
+      foregroundVideoRef.current.currentTime = 0;
+      foregroundVideoRef.current.play();
+    }
+  };
+
+  // * Stop Foreground Video
+  const stopForegroundVideo = () => {
+    if (foregroundVideoRef.current) {
+      foregroundVideoRef.current.pause();
+      foregroundVideoRef.current.currentTime = 0;
+    }
+  };
+
+  // * Timeline start and end events
   const onTimeLineStart = () => {
-    console.log("Timeline started");
+    console.log("Timeline", slideID, "started");
 
     if (backgroundVideoRef.current) {
       backgroundVideoRef.current.currentTime = 0;
       backgroundVideoRef.current.play();
     }
-
-    if (foregroundVideoRef.current) {
-      foregroundVideoRef.current.pause();
-      foregroundVideoRef.current.currentTime = 0;
-
-      setTimeout(() => {
-        if (foregroundVideoRef.current) foregroundVideoRef.current.play();
-      }, 2500);
-    }
+    stopForegroundVideo();
   };
 
+  // * Timeline end event
   const onTimeLineEnd = () => {
     console.log("Timeline ended");
+
+    timeline?.time(0);
 
     if (backgroundVideoRef.current) {
       backgroundVideoRef.current.pause();
     }
+
+    onCurrentSlideEnd(slideID);
   };
 
-  const initSplitText = async ({
-    title,
-    hero,
-  }: {
-    title: string;
-    hero: string;
-  }) => {
+  // * Initialize SplitText and return the SplitTypes
+  const initSplitType = async (
+    titleId: string,
+    heroId: string
+  ): Promise<{
+    title: SplitType;
+    hero: SplitType;
+  }> => {
     let splits = await {
-      title: SplitType.create(title),
-      hero: SplitType.create(hero),
+      title: SplitType.create(titleId),
+      hero: SplitType.create(heroId),
     };
 
     setSplitTitle(splits.title);
@@ -187,25 +231,32 @@ function HeroSlideContainer({
     return splits;
   };
 
-  useEffect(() => {
-    const init = async () => {
-      const splits = await initSplitText({
-        title: `#title-${toKebabCase(data.achievementTitle)}`,
-        hero: `#hero-${toKebabCase(data.name)}`,
-      });
-      initTimeLine(splits);
-    };
+  // * Initialize SplitText and Timeline
+  const initSlide = async () => {
+    console.log("Initializing Slide ", slideID);
+    const splits = await initSplitType(
+      `#title-${toKebabCase(data.achievementTitle)}`,
+      `#hero-${toKebabCase(data.name)}`
+    );
+    initTimeLine(splits);
+  };
 
-    init();
+  useEffect(() => {
+    initSlide();
   }, []);
 
   return (
-    <div className="h-dvh w-full relative overflow-hidden isolate">
+    <div
+      className="h-dvh w-full fixed overflow-hidden isolate"
+      // TODO: Fix zIndex (2- slideId is temporary )
+      style={{ zIndex: animationState === "active" ? 1000 : 2 - slideID }}
+    >
       <HeroSlide
         foregroundVideoUrl={data.video}
         backgroundVideoUrl={data.achievementVideo}
         foregroundVideoRef={foregroundVideoRef}
         backgroundVideoRef={backgroundVideoRef}
+        slideId={slideID}
       />
       <SlideUpDescription
         hero={data.name}

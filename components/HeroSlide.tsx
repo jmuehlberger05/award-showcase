@@ -8,6 +8,7 @@ interface HeroSlideProps {
   backgroundVideoUrl: string;
   foregroundVideoRef: React.RefObject<HTMLVideoElement>;
   backgroundVideoRef: React.RefObject<HTMLVideoElement>;
+  slideId: number;
 }
 
 function HeroSlide({
@@ -15,6 +16,7 @@ function HeroSlide({
   backgroundVideoUrl,
   foregroundVideoRef,
   backgroundVideoRef,
+  slideId,
 }: HeroSlideProps) {
   return (
     <div>
@@ -23,6 +25,7 @@ function HeroSlide({
         controls={false}
         muted
         ref={backgroundVideoRef}
+        id={"backgroundVideo" + slideId}
       >
         <source src={backgroundVideoUrl} />
       </video>
@@ -32,7 +35,7 @@ function HeroSlide({
         controls={false}
         // loop
         muted
-        id="foregroundVideo"
+        id={"foregroundVideo" + slideId}
         ref={foregroundVideoRef}
       >
         <source src={foregroundVideoUrl} type="video/webm" />
