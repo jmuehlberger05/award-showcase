@@ -1,5 +1,4 @@
 "use client";
-"use strict";
 
 import React, { use, useEffect, useState } from "react";
 import HeroSlideContainer from "./HeroSlideContainer";
@@ -53,13 +52,23 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     console.log("Current Slide: ", currentSlide);
   }, [currentSlide]);
 
+  const getAnimationState = (index: number): AnimationState => {
+    if (index === currentSlide) {
+      return "active";
+    } else if (index === (currentSlide + 1) % data.length) {
+      return "nextInLine";
+    } else {
+      return "inactive";
+    }
+  };
+
   return (
     <div>
       {data.map((item, index) => (
         <HeroSlideContainer
           key={item.achievementID}
           data={item}
-          animationState={index === currentSlide ? "active" : "inactive"}
+          animationState={getAnimationState(index)}
           slideID={index}
           onCurrentSlideEnd={onCurrentSlideEnd}
           // timeline={gsap.timeline()}

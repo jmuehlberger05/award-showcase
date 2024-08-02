@@ -4,7 +4,7 @@
     "name": "Fabian",
     "video": "/videos/fabian_test2.webm",
     "achievementID": 2,
-    "achievementTitle": "Frühester Vogel",
+    "achievementTitle": "Frühster Vogel des Monats",
     "achievementVideo": "/videos/stock/bird.mp4",
     "details": {
       "title": "Frühste Zeitbuchung: 06:00 Uhr"
@@ -19,6 +19,17 @@
     "achievementVideo": "/videos/stock/owl.mp4",
     "details": {
       "title": "Späteste Zeitbuchung: 01:00 Uhr"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Jakob",
+    "video": "/videos/roman.webm",
+    "achievementID": 3,
+    "achievementTitle": "Ferialhilfe des Jahres",
+    "achievementVideo": "/videos/stock/thumbs.mov",
+    "details": {
+      "title": "Früheste Buchung: 04:30 Uhr"
     }
   }
 ]

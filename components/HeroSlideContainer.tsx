@@ -7,6 +7,7 @@ import HeroSlide from "./HeroSlide";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { toKebabCase } from "@/app/lib/util/stringFunctions";
+import { transform } from "next/dist/build/swc";
 
 function HeroSlideContainer({
   data,
@@ -245,11 +246,31 @@ function HeroSlideContainer({
     initSlide();
   }, []);
 
+  const returnAnimationStateStyles = (state: AnimationState) => {
+    switch (state) {
+      case "inactive":
+        return {
+          transform: "translateY(-100%)",
+          zIndex: 1000,
+        };
+      case "active":
+        return {
+          transform: "translateY(0)",
+          zIndex: 1000,
+        };
+      case "nextInLine":
+        return {
+          transform: "translateY(100%)",
+          zIndex: 100,
+        };
+    }
+  };
+
   return (
     <div
-      className="h-dvh w-full fixed overflow-hidden isolate"
+      className="h-dvh w-full fixed overflow-hidden isolate transition-transform duration-500"
       // TODO: Fix zIndex (2- slideId is temporary )
-      style={{ zIndex: animationState === "active" ? 1000 : 2 - slideID }}
+      style={returnAnimationStateStyles(animationState)}
     >
       <HeroSlide
         foregroundVideoUrl={data.video}
