@@ -18,7 +18,7 @@
     "achievementTitle": "Nachteule des Monats",
     "achievementVideo": "/videos/stock/owl.mp4",
     "details": {
-      "title": "Späteste Zeitbuchung: 01:00 Uhr"
+      "title": "Späteste Zeitbuchung: 01:00 - 3:00 Uhr"
     }
   },
   {
@@ -26,10 +26,10 @@
     "name": "Nächster Hero",
     "video": "/videos/roman.webm",
     "achievementID": 3,
-    "achievementTitle": "Herobeschreibung",
+    "achievementTitle": "Hero Beschreibung",
     "achievementVideo": "/videos/stock/thumbs.mov",
     "details": {
-      "title": "Früheste Buchung: 04:30 Uhr"
+      "title": "Details go here"
     }
   }
 ]

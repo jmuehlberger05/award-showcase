@@ -27,7 +27,8 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
 
   // * Fetch data from API
   useEffect(() => {
-    fetch(dataURL)
+    // Disable the default caching in Next.js 14
+    fetch(dataURL, { cache: "no-store", next: { revalidate: 0 } })
       .then((response) => {
         return response.json();
       })
@@ -36,11 +37,9 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
       });
   }, [dataURL]);
 
+  // * Increment Slide and infinite loop
   const incrementSlide = () => {
-    // * Increment Slide and infinite loop
-
     setCurrentSlide((prev) => (prev + 1) % data.length);
-    // console.log("Incrementing from", currentSlide, "to", currentSlide + 1);
   };
 
   const onCurrentSlideEnd = (slideID: number) => {

@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 
 interface HeroSlideProps {
-  foregroundVideoUrl: string;
-  backgroundVideoUrl: string;
-  foregroundVideoRef: React.RefObject<HTMLVideoElement>;
-  backgroundVideoRef: React.RefObject<HTMLVideoElement>;
+  foregroundVideo: Video;
+  backgroundVideo: Video;
   slideId: number;
 }
 
+export type Video = {
+  url: string;
+  ref: React.RefObject<HTMLVideoElement>;
+};
+
 function HeroSlide({
-  foregroundVideoUrl,
-  backgroundVideoUrl,
-  foregroundVideoRef,
-  backgroundVideoRef,
+  foregroundVideo,
+  backgroundVideo,
   slideId,
 }: HeroSlideProps) {
   return (
@@ -24,21 +24,19 @@ function HeroSlide({
         className="absolute h-dvh w-full object-cover"
         controls={false}
         muted
-        ref={backgroundVideoRef}
+        ref={backgroundVideo.ref}
         id={"backgroundVideo" + slideId}
       >
-        <source src={backgroundVideoUrl} />
+        <source src={backgroundVideo.url} />
       </video>
       <video
         className="absolute h-dvh w-full object-cover left-0"
-        // autoPlay
         controls={false}
-        // loop
         muted
         id={"foregroundVideo" + slideId}
-        ref={foregroundVideoRef}
+        ref={foregroundVideo.ref}
       >
-        <source src={foregroundVideoUrl} type="video/webm" />
+        <source src={foregroundVideo.url} type="video/webm" />
       </video>
     </div>
   );

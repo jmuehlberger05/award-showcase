@@ -7,26 +7,20 @@ import HeroSlide from "./HeroSlide";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { toKebabCase } from "@/app/lib/util/stringFunctions";
-import { transform } from "next/dist/build/swc";
 
 function HeroSlideContainer({
   data,
   animationState,
   slideID,
   onCurrentSlideEnd,
-  // timeline,
 }: {
   data: HeroDataDTO;
   animationState: AnimationState;
   slideID: number;
   onCurrentSlideEnd: (slideID: number) => void;
-  // timeline: gsap.core.Timeline;
 }) {
   const foregroundVideoRef = useRef<HTMLVideoElement>(null);
   const backgroundVideoRef = useRef<HTMLVideoElement>(null);
-
-  const [splitTitle, setSplitTitle] = useState<SplitType | null>(null);
-  const [splitHero, setSplitHero] = useState<SplitType | null>(null);
 
   const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
 
@@ -39,24 +33,24 @@ function HeroSlideContainer({
   const initTimeLine = ({
     title,
     hero,
+    details,
   }: {
     title: SplitType;
     hero: SplitType;
+    details: SplitType;
   }) => {
-    // timeline.onStart = onTimeLineStart;
-    // timeline.onComplete = onTimeLineEnd;
     var tl = gsap.timeline({
-      // repeat: -1,
-      // repeatDelay: 1,
       onStart: onTimeLineStart,
       onComplete: onTimeLineEnd,
     });
 
-    tl.set(hero!.words, {
+    // Set initial Conditions
+    tl.set([hero!.words, details!.words, title!.words], {
       opacity: 0,
       y: 100,
     });
 
+    // Pause till the slide gets activated
     tl.pause();
 
     // * Start Step 1 -> Animate Title in
@@ -113,7 +107,7 @@ function HeroSlideContainer({
 
     // * Start Step 2 -> Animate Hero Name in
     tl.fromTo(
-      hero!.words,
+      [hero!.words, details!.words],
       {
         opacity: 0,
         delay: -0.1,
@@ -132,7 +126,7 @@ function HeroSlideContainer({
 
     // * End Step 2 -> Animate Hero Name out
     tl.fromTo(
-      hero!.words,
+      [hero!.words, details!.words],
       {
         delay: 1,
         opacity: 1,
@@ -159,36 +153,36 @@ function HeroSlideContainer({
     setTimeline(tl);
   };
 
-  const startTimeLine = () => {
-    timeline?.time(0);
-    timeline?.resume();
-  };
-
+  // * Start timeline when animationstate is active.
   useEffect(() => {
     if (animationState === "active") {
       console.log("Starting Timeline", slideID);
 
-      setTimeout(startTimeLine, 50);
+      // Add a delay to initialize Splittype and Timelines first.
+      setTimeout(() => {
+        timeline?.time(0);
+        timeline?.resume();
+      }, 30);
     }
   }, [animationState, timeline]);
 
   // * Start Foreground Video
   const startForegroundVideo = () => {
-    if (foregroundVideoRef.current) {
-      foregroundVideoRef.current.currentTime = 0;
-      foregroundVideoRef.current.play();
-    }
+    if (!foregroundVideoRef.current) return;
+
+    foregroundVideoRef.current.currentTime = 0;
+    foregroundVideoRef.current.play();
   };
 
   // * Stop Foreground Video
   const stopForegroundVideo = () => {
-    if (foregroundVideoRef.current) {
-      foregroundVideoRef.current.pause();
-      foregroundVideoRef.current.currentTime = 0;
-    }
+    if (!foregroundVideoRef.current) return;
+
+    foregroundVideoRef.current.pause();
+    foregroundVideoRef.current.currentTime = 0;
   };
 
-  // * Timeline start and end events
+  // * Timeline start event
   const onTimeLineStart = () => {
     console.log("Timeline", slideID, "started");
 
@@ -215,37 +209,39 @@ function HeroSlideContainer({
   // * Initialize SplitText and return the SplitTypes
   const initSplitType = async (
     titleId: string,
-    heroId: string
+    heroId: string,
+    detailsId: string
   ): Promise<{
     title: SplitType;
     hero: SplitType;
+    details: SplitType;
   }> => {
     let splits = await {
       title: SplitType.create(titleId),
       hero: SplitType.create(heroId),
+      details: SplitType.create(detailsId),
     };
-
-    setSplitTitle(splits.title);
-    setSplitHero(splits.hero);
-
     console.log("SplitText initialized");
     return splits;
   };
 
-  // * Initialize SplitText and Timeline
-  const initSlide = async () => {
-    console.log("Initializing Slide ", slideID);
-    const splits = await initSplitType(
-      `#title-${toKebabCase(data.achievementTitle)}`,
-      `#hero-${toKebabCase(data.name)}`
-    );
-    initTimeLine(splits);
-  };
-
+  // * Initialize Slide on mount
   useEffect(() => {
+    // * Initialize SplitText and Timeline
+    const initSlide = async () => {
+      console.log("Initializing Slide ", slideID);
+      const splits = await initSplitType(
+        `#title-${toKebabCase(data.achievementTitle)}`,
+        `#hero-${toKebabCase(data.name)}`,
+        `#details-${toKebabCase(data.details.title)}`
+      );
+      initTimeLine(splits);
+    };
+
     initSlide();
   }, []);
 
+  // * Return the Styles for the Slide based on the current animationState
   const returnAnimationStateStyles = (state: AnimationState) => {
     switch (state) {
       case "inactive":
@@ -269,24 +265,29 @@ function HeroSlideContainer({
   return (
     <div
       className="h-dvh w-full fixed overflow-hidden isolate transition-transform duration-500"
-      // TODO: Fix zIndex (2- slideId is temporary )
       style={returnAnimationStateStyles(animationState)}
     >
       <HeroSlide
-        foregroundVideoUrl={data.video}
-        backgroundVideoUrl={data.achievementVideo}
-        foregroundVideoRef={foregroundVideoRef}
-        backgroundVideoRef={backgroundVideoRef}
+        foregroundVideo={{ url: data.video, ref: foregroundVideoRef }}
+        backgroundVideo={{
+          url: data.achievementVideo,
+          ref: backgroundVideoRef,
+        }}
         slideId={slideID}
       />
       <SlideUpDescription
-        hero={data.name}
-        heroId={`hero-${toKebabCase(data.name)}`}
-        heroSplit={splitHero!}
-        title={data.achievementTitle}
-        titleId={`title-${toKebabCase(data.achievementTitle)}`}
-        titleSplit={splitTitle!}
-        state={animationState}
+        hero={{
+          text: data.name,
+          id: `hero-${toKebabCase(data.name)}`,
+        }}
+        title={{
+          text: data.achievementTitle,
+          id: `title-${toKebabCase(data.achievementTitle)}`,
+        }}
+        details={{
+          text: data.details.title,
+          id: `details-${toKebabCase(data.details.title)}`,
+        }}
       />
     </div>
   );
