@@ -28,7 +28,7 @@ function HeroSlideContainer({
     step1: 2,
     step2: 2,
     step3: 1,
-  };
+  } as const;
 
   const initTimeLine = ({
     title,

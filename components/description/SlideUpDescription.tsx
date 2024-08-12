@@ -17,7 +17,7 @@ function SlideUpDescription({ title, hero, details }: SlideUpDescriptionProps) {
   return (
     <div>
       <div className="absolute inset-0 text-white z-100">
-        <div className="absolute top-[50dvh] bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent z-100 isolate">
+        <div className="absolute top-[50dvh] bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent z-100 isolate">
           <div className="overflow-hidden absolute left-10 bottom-10 z-100">
             <h1
               className="text-[12vw] font-bold mb-3 leading-[1] z-100"
