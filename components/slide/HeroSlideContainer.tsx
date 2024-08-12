@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { AnimationState, HeroDataDTO } from "./HeroPresentation";
-import SlideUpDescription from "./description/SlideUpDescription";
+import { AnimationState, HeroDataDTO } from "../HeroPresentation";
+import SlideUpDescription from "../description/SlideUpDescription";
 import HeroSlide from "./HeroSlide";
 import gsap from "gsap";
 import SplitType from "split-type";
-import { toKebabCase } from "@/app/lib/util/stringFunctions";
+import { toIdString } from "@/app/lib/util/stringFunctions";
 
 function HeroSlideContainer({
   data,
@@ -30,15 +30,15 @@ function HeroSlideContainer({
     step3: 1,
   } as const;
 
-  const initTimeLine = ({
-    title,
-    hero,
-    details,
-  }: {
+  type SlideSplits = {
     title: SplitType;
     hero: SplitType;
     details: SplitType;
-  }) => {
+  };
+
+  // * Initialize Timeline with the SplitTexts
+  // The timeline is then paused and started when the animationState is active.
+  const initTimeLine = ({ title, hero, details }: SlideSplits) => {
     var tl = gsap.timeline({
       onStart: onTimeLineStart,
       onComplete: onTimeLineEnd,
@@ -70,7 +70,7 @@ function HeroSlideContainer({
       }
     );
 
-    // * End Step 1 -> Animate Title out
+    // End Step 1 -> Animate Title out
     tl.fromTo(
       title!.words,
       {
@@ -85,11 +85,11 @@ function HeroSlideContainer({
         y: -100,
         ease: "power3.inOut",
         stagger: 0.1,
-        onComplete: startForegroundVideo,
+        onComplete: () => startVideo(foregroundVideoRef),
       }
     );
 
-    // * Start Step 2 -> Animate Foreground Video in
+    // Start Step 2 -> Animate Foreground Video in
     tl.fromTo(
       foregroundVideoRef.current,
       {
@@ -105,7 +105,7 @@ function HeroSlideContainer({
       }
     );
 
-    // * Start Step 2 -> Animate Hero Name in
+    // Start Step 2 -> Animate Hero Name in
     tl.fromTo(
       [hero!.words, details!.words],
       {
@@ -124,7 +124,7 @@ function HeroSlideContainer({
       }
     );
 
-    // * End Step 2 -> Animate Hero Name out
+    // End Step 2 -> Animate Hero Name out
     tl.fromTo(
       [hero!.words, details!.words],
       {
@@ -141,13 +141,13 @@ function HeroSlideContainer({
       }
     );
 
-    // * Start Step 3 -> Animate Foreground Video out
+    // Start Step 3 -> Animate Foreground Video out
     tl.to(foregroundVideoRef.current, {
       y: "100%",
       ease: "power3.inOut",
       delay: -0.5,
       duration: 1,
-      onComplete: stopForegroundVideo,
+      onComplete: () => stopVideo(foregroundVideoRef),
     });
 
     setTimeline(tl);
@@ -166,56 +166,47 @@ function HeroSlideContainer({
     }
   }, [animationState, timeline]);
 
-  // * Start Foreground Video
-  const startForegroundVideo = () => {
-    if (!foregroundVideoRef.current) return;
+  // * Start a video from the beginning
+  const startVideo = (videoRef: React.RefObject<HTMLVideoElement>) => {
+    if (!videoRef.current) return;
 
-    foregroundVideoRef.current.currentTime = 0;
-    foregroundVideoRef.current.play();
+    videoRef.current.currentTime = 0;
+    videoRef.current.play();
   };
 
-  // * Stop Foreground Video
-  const stopForegroundVideo = () => {
-    if (!foregroundVideoRef.current) return;
+  // * Stop a video and reset the time to 0
+  const stopVideo = (videoRef: React.RefObject<HTMLVideoElement>) => {
+    if (!videoRef.current) return;
 
-    foregroundVideoRef.current.pause();
-    foregroundVideoRef.current.currentTime = 0;
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
   };
 
   // * Timeline start event
   const onTimeLineStart = () => {
     console.log("Timeline", slideID, "started");
 
-    if (backgroundVideoRef.current) {
-      backgroundVideoRef.current.currentTime = 0;
-      backgroundVideoRef.current.play();
-    }
-    stopForegroundVideo();
+    startVideo(backgroundVideoRef);
+    // stop the foreground video if it is playing by default
+    stopVideo(foregroundVideoRef);
   };
 
   // * Timeline end event
   const onTimeLineEnd = () => {
-    console.log("Timeline ended");
+    console.log("Timeline", slideID, "ended");
 
     timeline?.time(0);
-
-    if (backgroundVideoRef.current) {
-      backgroundVideoRef.current.pause();
-    }
+    stopVideo(backgroundVideoRef);
 
     onCurrentSlideEnd(slideID);
   };
 
-  // * Initialize SplitText and return the SplitTypes
+  // * Initialize SplitText and return the SplitTypes as SlideSplits
   const initSplitType = async (
     titleId: string,
     heroId: string,
     detailsId: string
-  ): Promise<{
-    title: SplitType;
-    hero: SplitType;
-    details: SplitType;
-  }> => {
+  ): Promise<SlideSplits> => {
     let splits = await {
       title: SplitType.create(titleId),
       hero: SplitType.create(heroId),
@@ -225,15 +216,15 @@ function HeroSlideContainer({
     return splits;
   };
 
-  // * Initialize Slide on mount
+  // * Initialize SplitTypes and Timeline on mount
   useEffect(() => {
     // * Initialize SplitText and Timeline
     const initSlide = async () => {
       console.log("Initializing Slide ", slideID);
       const splits = await initSplitType(
-        `#title-${toKebabCase(data.achievementTitle)}`,
-        `#hero-${toKebabCase(data.name)}`,
-        `#details-${toKebabCase(data.details.title)}`
+        toIdString("#title", data.achievement.title),
+        toIdString("#hero", data.hero.name),
+        toIdString("#details", data.achievement.details.title)
       );
       initTimeLine(splits);
     };
@@ -268,25 +259,25 @@ function HeroSlideContainer({
       style={returnAnimationStateStyles(animationState)}
     >
       <HeroSlide
-        foregroundVideo={{ url: data.video, ref: foregroundVideoRef }}
+        foregroundVideo={{ url: data.hero.video, ref: foregroundVideoRef }}
         backgroundVideo={{
-          url: data.achievementVideo,
+          url: data.achievement.video,
           ref: backgroundVideoRef,
         }}
         slideId={slideID}
       />
       <SlideUpDescription
         hero={{
-          text: data.name,
-          id: `hero-${toKebabCase(data.name)}`,
+          text: data.hero.name,
+          id: toIdString("hero", data.hero.name),
         }}
         title={{
-          text: data.achievementTitle,
-          id: `title-${toKebabCase(data.achievementTitle)}`,
+          text: data.achievement.title,
+          id: toIdString("title", data.achievement.title),
         }}
         details={{
-          text: data.details.title,
-          id: `details-${toKebabCase(data.details.title)}`,
+          text: data.achievement.details.title,
+          id: toIdString("details", data.achievement.details.title),
         }}
       />
     </div>

@@ -1,29 +1,30 @@
 "use client";
 
-import React, { use, useEffect, useState } from "react";
-import HeroSlideContainer from "./HeroSlideContainer";
-import gsap from "gsap";
+import React, { useEffect, useState } from "react";
+import HeroSlideContainer from "./slide/HeroSlideContainer";
 
+// * HeroDataDTO is the data structure that the API returns
 export type HeroDataDTO = {
   id: number;
-  name: string;
-  video: string;
-  achievementID: number;
-  achievementTitle: string;
-  achievementVideo: string;
-  details: {
+  hero: {
+    name: string;
+    video: string;
+  };
+  achievement: {
     title: string;
+    video: string;
+    details: {
+      title: string;
+    };
   };
 };
 
+// * Animation State for each slide
 export type AnimationState = "nextInLine" | "active" | "inactive";
 
 function HeroPresentation({ dataURL }: { dataURL: string }) {
   const [data, setData] = useState<HeroDataDTO[]>([]);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-
-  const [animationState, setAnimationState] =
-    useState<AnimationState>("inactive");
 
   // * Fetch data from API
   useEffect(() => {
@@ -42,15 +43,7 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     setCurrentSlide((prev) => (prev + 1) % data.length);
   };
 
-  const onCurrentSlideEnd = (slideID: number) => {
-    console.log("Current Slide Ended ", slideID);
-    incrementSlide();
-  };
-
-  useEffect(() => {
-    console.log("Current Slide: ", currentSlide);
-  }, [currentSlide]);
-
+  // * Get Animation State for each slide
   const getAnimationState = (index: number): AnimationState => {
     if (index === currentSlide) {
       return "active";
@@ -65,12 +58,11 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     <div>
       {data.map((item, index) => (
         <HeroSlideContainer
-          key={item.achievementID}
+          key={item.id}
           data={item}
           animationState={getAnimationState(index)}
           slideID={index}
-          onCurrentSlideEnd={onCurrentSlideEnd}
-          // timeline={gsap.timeline()}
+          onCurrentSlideEnd={incrementSlide}
         />
       ))}
     </div>

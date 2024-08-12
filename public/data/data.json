@@ -1,35 +1,44 @@
 [
   {
-    "id": 2,
-    "name": "Fabian",
-    "video": "/videos/fabian_test2.webm",
-    "achievementID": 2,
-    "achievementTitle": "Frühster Vogel des Monats",
-    "achievementVideo": "/videos/stock/bird.mp4",
-    "details": {
-      "title": "Frühste Zeitbuchung: 06:00 Uhr"
+    "id": 1,
+    "hero": {
+      "name": "Fabian",
+      "video": "/videos/fabian_test2.webm"
+    },
+    "achievement": {
+      "title": "Frühster Vogel des Monats",
+      "video": "/videos/stock/bird.mp4",
+      "details": {
+        "title": "Frühste Zeitbuchung: 06:00 Uhr"
+      }
     }
   },
   {
-    "id": 1,
-    "name": "Kathi",
-    "video": "/videos/kathi_test.webm",
-    "achievementID": 1,
-    "achievementTitle": "Nachteule des Monats",
-    "achievementVideo": "/videos/stock/owl.mp4",
-    "details": {
-      "title": "Späteste Zeitbuchung: 01:00 - 3:00 Uhr"
+    "id": 2,
+    "hero": {
+      "name": "Kathi",
+      "video": "/videos/kathi_test.webm"
+    },
+    "achievement": {
+      "title": "Nachteule des Monats",
+      "video": "/videos/stock/owl.mp4",
+      "details": {
+        "title": "Späteste Zeitbuchung: 01:00 - 3:00 Uhr"
+      }
     }
   },
   {
     "id": 3,
-    "name": "Nächster Hero",
-    "video": "/videos/roman.webm",
-    "achievementID": 3,
-    "achievementTitle": "Hero Beschreibung",
-    "achievementVideo": "/videos/stock/thumbs.mov",
-    "details": {
-      "title": "Details go here"
+    "hero": {
+      "name": "Nächster Hero",
+      "video": "/videos/roman.webm"
+    },
+    "achievement": {
+      "title": "Hero Beschreibung",
+      "video": "/videos/stock/thumbs.mov",
+      "details": {
+        "title": "Details go here"
+      }
     }
   }
 ]
