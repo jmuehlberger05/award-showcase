@@ -1,6 +1,6 @@
 # Softaware Heroboard
 
-The Heroboard is built with [Next.js](https://nextjs.org/) 14.
+The Heroboard is built with [Next.js 14](https://nextjs.org/).
 
 ## Getting Started
 
@@ -34,3 +34,17 @@ The data is structured as follows:
 
 - The video format for the hero has to be a `.webm` file with encoded alpha channel.
 - The video format for the achievement can be any video file type, however `.mp4` or `.webm` is recommended.
+
+## Component Structure
+
+The project is structured as follows:
+
+```text
+app/page.tsx
+└── HeroPresentation -> maps the hero data
+    └── HeroSlideContainer
+        ├── HeroSlide
+        └── SlideUpDescription
+
+
+```
