@@ -2,8 +2,8 @@
   {
     "id": 0,
     "hero": {
-      "name": "Tobias",
-      "video": "/videos/tobias.webm"
+      "name": "Felix",
+      "video": "/videos/people/felix.webm"
     },
     "achievement": {
       "title": "Maradonna",
@@ -17,7 +17,7 @@
     "id": 1,
     "hero": {
       "name": "Michi",
-      "video": "/videos/michi.webm"
+      "video": "/videos/people/michi.webm"
     },
     "achievement": {
       "title": "Billable Beast",
@@ -31,7 +31,7 @@
     "id": 2,
     "hero": {
       "name": "Daniel",
-      "video": "/videos/daniel.webm"
+      "video": "/videos/people/daniel.webm"
     },
     "achievement": {
       "title": "Remote Ranger",
@@ -42,13 +42,27 @@
     }
   },
   {
+    "id": 0,
+    "hero": {
+      "name": "Tobias",
+      "video": "/videos/people/tobias.webm"
+    },
+    "achievement": {
+      "title": "Spesensammler",
+      "video": "/videos/stock/taxi.mp4",
+      "details": {
+        "title": "Meisten Auswärtstermine im Monat"
+      }
+    }
+  },
+  {
     "id": 3,
     "hero": {
       "name": "Fabian",
-      "video": "/videos/fabian_test2.webm"
+      "video": "/videos/people/fabian_test2.webm"
     },
     "achievement": {
-      "title": "Frühster Vogel des Monats",
+      "title": "Frühester Vogel des Monats",
       "video": "/videos/stock/bird.mp4",
       "details": {
         "title": "Frühste Zeitbuchung: 06:00 Uhr"
@@ -59,7 +73,7 @@
     "id": 4,
     "hero": {
       "name": "Kathi",
-      "video": "/videos/kathi_test.webm"
+      "video": "/videos/people/kathi_test.webm"
     },
     "achievement": {
       "title": "Nachteule des Monats",
