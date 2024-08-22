@@ -5,7 +5,6 @@ import HeroSlideContainer from "./slide/HeroSlideContainer";
 
 // * HeroDataDTO is the data structure that the API returns
 export type HeroDataDTO = {
-  id: number;
   hero: {
     name: string;
     video: string;
@@ -58,7 +57,7 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     <div>
       {data.map((item, index) => (
         <HeroSlideContainer
-          key={item.id}
+          key={index}
           data={item}
           animationState={getAnimationState(index)}
           slideID={index}
