@@ -14,6 +14,19 @@
   },
   {
     "hero": {
+      "name": "Markus",
+      "video": "/videos/people/markus.webm"
+    },
+    "achievement": {
+      "title": "Drittligist",
+      "video": "/videos/stock/football_2.mp4",
+      "details": {
+        "title": "Die schlechtesten Wuzzel Scores"
+      }
+    }
+  },
+  {
+    "hero": {
       "name": "Michi",
       "video": "/videos/people/michi.webm"
     },
@@ -27,6 +40,19 @@
   },
   {
     "hero": {
+      "name": "Philipp",
+      "video": "/videos/people/philipp.webm"
+    },
+    "achievement": {
+      "title": "Chillmeister",
+      "video": "/videos/stock/vacation.mp4",
+      "details": {
+        "title": "Meisten Urlaubstage im Monat"
+      }
+    }
+  },
+  {
+    "hero": {
       "name": "Daniel",
       "video": "/videos/people/daniel.webm"
     },
@@ -35,6 +61,19 @@
       "video": "/videos/stock/home.mp4",
       "details": {
         "title": "Meisten Homeoffice-Stunden im Monat"
+      }
+    }
+  },
+  {
+    "hero": {
+      "name": "Dominik",
+      "video": "/videos/people/dominik_a.webm"
+    },
+    "achievement": {
+      "title": "Optimist",
+      "video": "/videos/stock/optimist.mp4",
+      "details": {
+        "title": "Die meisten direkten Commits auf Main"
       }
     }
   },
