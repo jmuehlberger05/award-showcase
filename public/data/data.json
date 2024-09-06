@@ -66,6 +66,19 @@
   },
   {
     "hero": {
+      "name": "Mani",
+      "video": "/videos/people/manuel.webm"
+    },
+    "achievement": {
+      "title": "Keyboard Warrior",
+      "video": "/videos/stock/keyboard_warrior.mp4",
+      "details": {
+        "title": "Die meisten lines of code committed"
+      }
+    }
+  },
+  {
+    "hero": {
       "name": "Dominik",
       "video": "/videos/people/dominik_a.webm"
     },
@@ -93,7 +106,7 @@
   {
     "hero": {
       "name": "Fabian",
-      "video": "/videos/people/fabian_test2.webm"
+      "video": "/videos/people/fabian.webm"
     },
     "achievement": {
       "title": "Frühester Vogel des Monats",
@@ -113,6 +126,19 @@
       "video": "/videos/stock/owl.mp4",
       "details": {
         "title": "Späteste Zeitbuchung: 01:00 - 3:00 Uhr"
+      }
+    }
+  },
+  {
+    "hero": {
+      "name": "Jonas",
+      "video": "/videos/people/jonas.webm"
+    },
+    "achievement": {
+      "title": "Witzbold",
+      "video": "/videos/stock/witzbold.mp4",
+      "details": {
+        "title": "Die meisten Posts in #fun"
       }
     }
   }
