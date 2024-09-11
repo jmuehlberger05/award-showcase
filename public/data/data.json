@@ -105,8 +105,8 @@
   },
   {
     "hero": {
-      "name": "Fabian",
-      "video": "/videos/people/fabian.webm"
+      "name": "Jonas",
+      "video": "/videos/people/jonas.webm"
     },
     "achievement": {
       "title": "Frühester Vogel des Monats",
@@ -119,7 +119,7 @@
   {
     "hero": {
       "name": "Kathi",
-      "video": "/videos/people/kathi_test.webm"
+      "video": "/videos/people/kathi.webm"
     },
     "achievement": {
       "title": "Nachteule des Monats",
@@ -131,8 +131,8 @@
   },
   {
     "hero": {
-      "name": "Jonas",
-      "video": "/videos/people/jonas.webm"
+      "name": "Roman",
+      "video": "/videos/people/roman.webm"
     },
     "achievement": {
       "title": "Witzbold",
