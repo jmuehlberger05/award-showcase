@@ -1,3 +1,5 @@
+"use client";
+
 import HeroPresentation from "@/components/HeroPresentation";
 import { DATA_URL } from "./lib/constants";
 

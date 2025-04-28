@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HeroSlideContainer from "./slide/HeroSlideContainer";
+import { useFetch } from "@/app/lib/hooks/useFetch";
 
 // * HeroDataDTO is the data structure that the API returns
 export type HeroDataDTO = {
@@ -22,31 +23,23 @@ export type HeroDataDTO = {
 export type AnimationState = "nextInLine" | "active" | "inactive";
 
 function HeroPresentation({ dataURL }: { dataURL: string }) {
-  const [data, setData] = useState<HeroDataDTO[]>([]);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-
-  // * Fetch data from API
-  useEffect(() => {
-    // Disable the default caching in Next.js 14
-    fetch(dataURL, { cache: "no-store", next: { revalidate: 0 } })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-      });
-  }, [dataURL]);
+  const { data, loading } = useFetch<HeroDataDTO[]>(dataURL);
 
   // * Increment Slide and infinite loop
   const incrementSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % data.length);
+    if (loading) return;
+    setCurrentSlide((prev) => (prev + 1) % data!.length);
   };
 
   // * Get Animation State for each slide
   const getAnimationState = (index: number): AnimationState => {
+    if (loading) {
+      return "inactive";
+    }
     if (index === currentSlide) {
       return "active";
-    } else if (index === (currentSlide + 1) % data.length) {
+    } else if (index === (currentSlide + 1) % data!.length) {
       return "nextInLine";
     } else {
       return "inactive";
@@ -55,15 +48,21 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
 
   return (
     <div>
-      {data.map((item, index) => (
-        <HeroSlideContainer
-          key={index}
-          data={item}
-          animationState={getAnimationState(index)}
-          slideID={index}
-          onCurrentSlideEnd={incrementSlide}
-        />
-      ))}
+      {loading && (
+        <div className="flex justify-center items-center h-screen">
+          <h1 className="text-2xl font-bold">Loading...</h1>
+        </div>
+      )}
+      {data &&
+        data.map((item, index) => (
+          <HeroSlideContainer
+            key={index}
+            data={item}
+            animationState={getAnimationState(index)}
+            slideID={index}
+            onCurrentSlideEnd={incrementSlide}
+          />
+        ))}
     </div>
   );
 }
