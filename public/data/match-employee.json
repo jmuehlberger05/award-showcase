@@ -1,0 +1,228 @@
+[
+  {
+    "FirstName": "Jakob",
+    "LastName": "Mühlberger",
+    "DiplayName": "Jakob",
+    "GithubUsername": "jmuehlberger05",
+    "Email": "jakob.muehlberger@softaware.at",
+    "VideoUrl": "https://link-to-video.com/jakob.webm",
+    "Aliases": [
+      "Jakob M.",
+      "Jakob Muehlberger",
+      "Jakob Mühlberger",
+      "Muehlberger",
+      "Jakob",
+      "Muehlberger",
+      "Mühlberger"
+    ]
+  },
+  {
+    "FirstName": "Dominik",
+    "LastName": "Achleitner",
+    "DiplayName": "Dominik",
+    "GithubUsername": "0xDomi",
+    "Email": "dominik.achleitner@softaware.at",
+    "VideoUrl": "https://link-to-video.com/dominik.webm",
+    "Aliases": ["Dominik A.", "Dominik Achleitner", "Achleitner", "Dominik"]
+  },
+  {
+    "FirstName": "Michael",
+    "LastName": "Anzinger",
+    "DiplayName": "Michael A.",
+    "GithubUsername": "manzFH",
+    "Email": "michael.anzinger@softaware.at",
+    "VideoUrl": "https://link-to-video.com/michael-anzinger.webm",
+    "Aliases": ["Michael A.", "Michael Anzinger", "Anzinger", "Michael"]
+  },
+  {
+    "FirstName": "Tobias",
+    "LastName": "Berei",
+    "DiplayName": "Tobias",
+    "GithubUsername": "tobiasberei",
+    "Email": "tobias.berei@softaware.at",
+    "VideoUrl": "https://link-to-video.com/tobias.webm",
+    "Aliases": ["Tobias B.", "Tobias Berei", "Berei", "Tobias"]
+  },
+  {
+    "FirstName": "Oliver",
+    "LastName": "Bindreiter",
+    "DiplayName": "Oliver",
+    "GithubUsername": "oliverbindreiter",
+    "Email": "oliver.bindreiter@softaware.at",
+    "VideoUrl": "https://link-to-video.com/oliver.webm",
+    "Aliases": ["Oliver B.", "Oliver Bindreiter", "Bindreiter", "Oliver"]
+  },
+  {
+    "FirstName": "Jonas",
+    "LastName": "Birklbauer",
+    "DiplayName": "Jonas",
+    "GithubUsername": "birklbauerjonas",
+    "Email": "jonas.birklbauer@softaware.at",
+    "VideoUrl": "https://link-to-video.com/jonas.webm",
+    "Aliases": ["Jonas B.", "Jonas Birklbauer", "Birklbauer", "Jonas"]
+  },
+  {
+    "FirstName": "Nico",
+    "LastName": "Bojer",
+    "DiplayName": "Nico",
+    "GithubUsername": "bojernico",
+    "Email": "nico.bojer@softaware.at",
+    "VideoUrl": "https://link-to-video.com/nico.webm",
+    "Aliases": ["Nico B.", "Nico Bojer", "Bojer", "Nico"]
+  },
+  {
+    "FirstName": "Markus",
+    "LastName": "Dietrich",
+    "DiplayName": "Markus",
+    "GithubUsername": "mdi1984",
+    "Email": "markus.dietrich@softaware.at",
+    "VideoUrl": "https://link-to-video.com/markus-dietrich.webm",
+    "Aliases": ["Markus D.", "Markus Dietrich", "Dietrich", "Markus"]
+  },
+  {
+    "FirstName": "Dominik",
+    "LastName": "Dörr",
+    "DiplayName": "Dominik D.",
+    "GithubUsername": "doerrD",
+    "Email": "dominik.doerr@softaware.at",
+    "VideoUrl": "https://link-to-video.com/dominik-doerr.webm",
+    "Aliases": [
+      "Dominik D.",
+      "Dominik Doerr",
+      "Dominik Dörr",
+      "Doerr",
+      "Dörr",
+      "Dominik"
+    ]
+  },
+  {
+    "FirstName": "Felix",
+    "LastName": "Eberhard",
+    "DiplayName": "Felix",
+    "GithubUsername": "feberhard",
+    "Email": "felix.eberhard@softaware.at",
+    "VideoUrl": "https://link-to-video.com/felix.webm",
+    "Aliases": ["Felix E.", "Felix Eberhard", "Eberhard", "Felix"]
+  },
+  {
+    "FirstName": "Michael",
+    "LastName": "Einsiedler",
+    "DiplayName": "Michael E.",
+    "GithubUsername": "meinsiedler",
+    "Email": "michael.einsiedler@softaware.at",
+    "VideoUrl": "https://link-to-video.com/michael-einsiedler.webm",
+    "Aliases": ["Michael E.", "Michael Einsiedler", "Einsiedler", "Michael"]
+  },
+  {
+    "FirstName": "Kathrin",
+    "LastName": "Enzenhofer",
+    "DiplayName": "Kathi",
+    "GithubUsername": "kathienz",
+    "Email": "kathrin.enzenhofer@softaware.at",
+    "VideoUrl": "https://link-to-video.com/kathrin.webm",
+    "Aliases": ["Kathrin E.", "Kathrin Enzenhofer", "Enzenhofer", "Kathrin"]
+  },
+  {
+    "FirstName": "Anna",
+    "LastName": "Estermann",
+    "DiplayName": "Anna",
+    "GithubUsername": "",
+    "Email": "anna.estermann@softaware.at",
+    "VideoUrl": "https://link-to-video.com/anna.webm",
+    "Aliases": ["Anna E.", "Anna Estermann", "Estermann", "Anna"]
+  },
+  {
+    "FirstName": "Manuel",
+    "LastName": "Fuchs",
+    "DiplayName": "Manuel",
+    "GithubUsername": "manuelfuchs",
+    "Email": "manuel.fuchs@softaware.at",
+    "VideoUrl": "https://link-to-video.com/manuel-fuchs.webm",
+    "Aliases": ["Manuel F.", "Manuel Fuchs", "Fuchs", "Manuel"]
+  },
+  {
+    "FirstName": "Christoph",
+    "LastName": "Gattermayr",
+    "DiplayName": "Christoph",
+    "GithubUsername": "ChriGa13",
+    "Email": "christoph.gattermayr@softaware.at",
+    "VideoUrl": "https://link-to-video.com/christoph-gattermayr.webm",
+    "Aliases": [
+      "Christoph G.",
+      "Christoph Gattermayr",
+      "Gattermayr",
+      "Christoph"
+    ]
+  },
+
+  {
+    "FirstName": "Gabriele",
+    "LastName": "Käferböck",
+    "DiplayName": "Gabriele",
+    "GithubUsername": "gkaeferboeck",
+    "Email": "gabriele.kaeferboeck@softaware.at",
+    "VideoUrl": "https://link-to-video.com/gabriele.webm",
+    "Aliases": [
+      "Gabriele K.",
+      "Gabriele Kaeferboeck",
+      "Gabriele Käferböck",
+      "Kaeferboeck",
+      "Käferböck",
+      "Gabriele"
+    ]
+  },
+  {
+    "FirstName": "Patrik",
+    "LastName": "Kimmeswenger",
+    "DiplayName": "Patrik",
+    "GithubUsername": "pkim",
+    "Email": "patrik.kimmeswenger@softaware.at",
+    "VideoUrl": "https://link-to-video.com/patrik.webm",
+    "Aliases": ["Patrik K.", "Patrik Kimmeswenger", "Kimmeswenger", "Patrik"]
+  },
+  {
+    "FirstName": "Philipp",
+    "LastName": "Pendelin",
+    "DiplayName": "Philipp",
+    "GithubUsername": "PendelinP",
+    "Email": "philipp.pendelin@softaware.at",
+    "VideoUrl": "https://link-to-video.com/philipp.webm",
+    "Aliases": ["Philipp P.", "Philipp Pendelin", "Pendelin", "Philipp"]
+  },
+  {
+    "FirstName": "Simon",
+    "LastName": "Planberger",
+    "DiplayName": "Simon",
+    "GithubUsername": "planbsim",
+    "Email": "simon.planberger@softaware.at",
+    "VideoUrl": "https://link-to-video.com/simon-planberger.webm",
+    "Aliases": ["Simon P.", "Simon Planberger", "Planberger", "Simon"]
+  },
+  {
+    "FirstName": "Fabian",
+    "LastName": "Rieder",
+    "DiplayName": "Fabian",
+    "GithubUsername": "fabianrieder",
+    "Email": "fabian.rieder@softaware.at",
+    "VideoUrl": "https://link-to-video.com/fabian.webm",
+    "Aliases": ["Fabian R.", "Fabian Rieder", "Rieder", "Fabian"]
+  },
+  {
+    "FirstName": "Roman",
+    "LastName": "Schacherl",
+    "DiplayName": "Roman",
+    "GithubUsername": "rschacherl",
+    "Email": "roman.schacherl@softaware.at",
+    "VideoUrl": "https://link-to-video.com/roman.webm",
+    "Aliases": ["Roman S.", "Roman Schacherl", "Schacherl", "Roman"]
+  },
+  {
+    "FirstName": "Daniel",
+    "LastName": "Sklenitzka",
+    "DiplayName": "Daniel",
+    "GithubUsername": "Skleni",
+    "Email": "daniel.sklenitzka@softaware.at",
+    "VideoUrl": "https://link-to-video.com/daniel-sklenitzka.webm",
+    "Aliases": ["Daniel S.", "Daniel Sklenitzka", "Sklenitzka", "Daniel"]
+  }
+]
