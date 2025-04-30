@@ -1,60 +1,60 @@
 [
   {
-    "id": "github-1",
+    "id": "github-1-keyboard-warrior",
     "title": "Keyboard Warrior",
     "video": "/videos/stock/github.mp4",
     "description": "Meisten Zeilen Code Commited"
   },
   {
-    "id": "github-2",
+    "id": "github-2-optimist",
     "title": "Optimist",
     "video": "/videos/stock/github_2.mp4",
     "description": "Meisten direktten Commits auf Main"
   },
   {
-    "id": "timecockpit-1",
+    "id": "timecockpit-1-chillmeister",
     "title": "Chillmeister",
     "video": "/videos/stock/github_3.mp4",
     "description": "Meisten Urlaubstage im Monat"
   },
   {
-    "id": "timecockpit-2",
+    "id": "timecockpit-2-remote-ranger",
     "title": "Remote Ranger",
     "video": "/videos/stock/github_4.mp4",
     "description": "Meisten Homeoffice-Stunden im Monat"
   },
   {
-    "id": "timecockpit-2",
+    "id": "timecockpit-3-billable-beast",
     "title": "Billable Beast",
     "video": "/videos/stock/github_5.mp4",
     "description": "Meisten verrechenbaren Stunden im Monat"
   },
   {
-    "id": "timecockpit-3",
+    "id": "timecockpit-4-nachteule",
     "title": "Nachteule",
     "video": "/videos/stock/github_6.mp4",
     "description": "Späteste Zeitbuchung im Monat"
   },
   {
-    "id": "timecockpit-4",
+    "id": "timecockpit-5-early-bird",
     "title": "Early Bird",
     "video": "/videos/stock/github_7.mp4",
     "description": "Früheste Zeitbuchung im Monat"
   },
   {
-    "id": "slack-1",
+    "id": "slack-1-witzbold",
     "title": "Witzbold",
     "video": "/videos/stock/slack.mp4",
     "description": "Meisten Post in #fun"
   },
   {
-    "id": "kickertool-1",
+    "id": "kickertool-1-maradonna",
     "title": "Maradonna",
     "video": "/videos/stock/slack_2.mp4",
     "description": "Besten Wuzzel-Scores"
   },
   {
-    "id": "kickertool-2",
+    "id": "kickertool-2-drittligist",
     "title": "Drittligist",
     "video": "/videos/stock/slack_3.mp4",
     "description": "Schlechtesten Wuzzel-Scores"
