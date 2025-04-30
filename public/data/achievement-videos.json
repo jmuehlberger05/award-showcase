@@ -1,0 +1,62 @@
+[
+  {
+    "id": "github-1",
+    "title": "Keyboard Warrior",
+    "video": "/videos/stock/github.mp4",
+    "description": "Meisten Zeilen Code Commited"
+  },
+  {
+    "id": "github-2",
+    "title": "Optimist",
+    "video": "/videos/stock/github_2.mp4",
+    "description": "Meisten direktten Commits auf Main"
+  },
+  {
+    "id": "timecockpit-1",
+    "title": "Chillmeister",
+    "video": "/videos/stock/github_3.mp4",
+    "description": "Meisten Urlaubstage im Monat"
+  },
+  {
+    "id": "timecockpit-2",
+    "title": "Remote Ranger",
+    "video": "/videos/stock/github_4.mp4",
+    "description": "Meisten Homeoffice-Stunden im Monat"
+  },
+  {
+    "id": "timecockpit-2",
+    "title": "Billable Beast",
+    "video": "/videos/stock/github_5.mp4",
+    "description": "Meisten verrechenbaren Stunden im Monat"
+  },
+  {
+    "id": "timecockpit-3",
+    "title": "Nachteule",
+    "video": "/videos/stock/github_6.mp4",
+    "description": "Späteste Zeitbuchung im Monat"
+  },
+  {
+    "id": "timecockpit-4",
+    "title": "Early Bird",
+    "video": "/videos/stock/github_7.mp4",
+    "description": "Früheste Zeitbuchung im Monat"
+  },
+  {
+    "id": "slack-1",
+    "title": "Witzbold",
+    "video": "/videos/stock/slack.mp4",
+    "description": "Meisten Post in #fun"
+  },
+  {
+    "id": "kickertool-1",
+    "title": "Maradonna",
+    "video": "/videos/stock/slack_2.mp4",
+    "description": "Besten Wuzzel-Scores"
+  },
+  {
+    "id": "kickertool-2",
+    "title": "Drittligist",
+    "video": "/videos/stock/slack_3.mp4",
+    "description": "Schlechtesten Wuzzel-Scores"
+  }
+]
