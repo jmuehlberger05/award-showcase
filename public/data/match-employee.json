@@ -2,7 +2,7 @@
   {
     "FirstName": "Jakob",
     "LastName": "Mühlberger",
-    "DiplayName": "Jakob",
+    "DisplayName": "Jakob",
     "GithubUsername": "jmuehlberger05",
     "Email": "jakob.muehlberger@softaware.at",
     "VideoUrl": "https://link-to-video.com/jakob.webm",
@@ -19,7 +19,7 @@
   {
     "FirstName": "Dominik",
     "LastName": "Achleitner",
-    "DiplayName": "Dominik",
+    "DisplayName": "Dominik",
     "GithubUsername": "0xDomi",
     "Email": "dominik.achleitner@softaware.at",
     "VideoUrl": "https://link-to-video.com/dominik.webm",
@@ -28,7 +28,7 @@
   {
     "FirstName": "Michael",
     "LastName": "Anzinger",
-    "DiplayName": "Michael A.",
+    "DisplayName": "Michael A.",
     "GithubUsername": "manzFH",
     "Email": "michael.anzinger@softaware.at",
     "VideoUrl": "https://link-to-video.com/michael-anzinger.webm",
@@ -37,7 +37,7 @@
   {
     "FirstName": "Tobias",
     "LastName": "Berei",
-    "DiplayName": "Tobias",
+    "DisplayName": "Tobias",
     "GithubUsername": "tobiasberei",
     "Email": "tobias.berei@softaware.at",
     "VideoUrl": "https://link-to-video.com/tobias.webm",
@@ -46,7 +46,7 @@
   {
     "FirstName": "Oliver",
     "LastName": "Bindreiter",
-    "DiplayName": "Oliver",
+    "DisplayName": "Oliver",
     "GithubUsername": "oliverbindreiter",
     "Email": "oliver.bindreiter@softaware.at",
     "VideoUrl": "https://link-to-video.com/oliver.webm",
@@ -55,7 +55,7 @@
   {
     "FirstName": "Jonas",
     "LastName": "Birklbauer",
-    "DiplayName": "Jonas",
+    "DisplayName": "Jonas",
     "GithubUsername": "birklbauerjonas",
     "Email": "jonas.birklbauer@softaware.at",
     "VideoUrl": "https://link-to-video.com/jonas.webm",
@@ -64,7 +64,7 @@
   {
     "FirstName": "Nico",
     "LastName": "Bojer",
-    "DiplayName": "Nico",
+    "DisplayName": "Nico",
     "GithubUsername": "bojernico",
     "Email": "nico.bojer@softaware.at",
     "VideoUrl": "https://link-to-video.com/nico.webm",
@@ -73,7 +73,7 @@
   {
     "FirstName": "Markus",
     "LastName": "Dietrich",
-    "DiplayName": "Markus",
+    "DisplayName": "Markus",
     "GithubUsername": "mdi1984",
     "Email": "markus.dietrich@softaware.at",
     "VideoUrl": "https://link-to-video.com/markus-dietrich.webm",
@@ -82,7 +82,7 @@
   {
     "FirstName": "Dominik",
     "LastName": "Dörr",
-    "DiplayName": "Dominik D.",
+    "DisplayName": "Dominik D.",
     "GithubUsername": "doerrD",
     "Email": "dominik.doerr@softaware.at",
     "VideoUrl": "https://link-to-video.com/dominik-doerr.webm",
@@ -98,7 +98,7 @@
   {
     "FirstName": "Felix",
     "LastName": "Eberhard",
-    "DiplayName": "Felix",
+    "DisplayName": "Felix",
     "GithubUsername": "feberhard",
     "Email": "felix.eberhard@softaware.at",
     "VideoUrl": "https://link-to-video.com/felix.webm",
@@ -107,7 +107,7 @@
   {
     "FirstName": "Michael",
     "LastName": "Einsiedler",
-    "DiplayName": "Michael E.",
+    "DisplayName": "Michael E.",
     "GithubUsername": "meinsiedler",
     "Email": "michael.einsiedler@softaware.at",
     "VideoUrl": "https://link-to-video.com/michael-einsiedler.webm",
@@ -116,7 +116,7 @@
   {
     "FirstName": "Kathrin",
     "LastName": "Enzenhofer",
-    "DiplayName": "Kathi",
+    "DisplayName": "Kathi",
     "GithubUsername": "kathienz",
     "Email": "kathrin.enzenhofer@softaware.at",
     "VideoUrl": "https://link-to-video.com/kathrin.webm",
@@ -125,7 +125,7 @@
   {
     "FirstName": "Anna",
     "LastName": "Estermann",
-    "DiplayName": "Anna",
+    "DisplayName": "Anna",
     "GithubUsername": "",
     "Email": "anna.estermann@softaware.at",
     "VideoUrl": "https://link-to-video.com/anna.webm",
@@ -134,7 +134,7 @@
   {
     "FirstName": "Manuel",
     "LastName": "Fuchs",
-    "DiplayName": "Manuel",
+    "DisplayName": "Manuel",
     "GithubUsername": "manuelfuchs",
     "Email": "manuel.fuchs@softaware.at",
     "VideoUrl": "https://link-to-video.com/manuel-fuchs.webm",
@@ -143,7 +143,7 @@
   {
     "FirstName": "Christoph",
     "LastName": "Gattermayr",
-    "DiplayName": "Christoph",
+    "DisplayName": "Christoph",
     "GithubUsername": "ChriGa13",
     "Email": "christoph.gattermayr@softaware.at",
     "VideoUrl": "https://link-to-video.com/christoph-gattermayr.webm",
@@ -158,7 +158,7 @@
   {
     "FirstName": "Gabriele",
     "LastName": "Käferböck",
-    "DiplayName": "Gabriele",
+    "DisplayName": "Gabriele",
     "GithubUsername": "gkaeferboeck",
     "Email": "gabriele.kaeferboeck@softaware.at",
     "VideoUrl": "https://link-to-video.com/gabriele.webm",
@@ -174,7 +174,7 @@
   {
     "FirstName": "Patrik",
     "LastName": "Kimmeswenger",
-    "DiplayName": "Patrik",
+    "DisplayName": "Patrik",
     "GithubUsername": "pkim",
     "Email": "patrik.kimmeswenger@softaware.at",
     "VideoUrl": "https://link-to-video.com/patrik.webm",
@@ -183,7 +183,7 @@
   {
     "FirstName": "Philipp",
     "LastName": "Pendelin",
-    "DiplayName": "Philipp",
+    "DisplayName": "Philipp",
     "GithubUsername": "PendelinP",
     "Email": "philipp.pendelin@softaware.at",
     "VideoUrl": "https://link-to-video.com/philipp.webm",
@@ -192,7 +192,7 @@
   {
     "FirstName": "Simon",
     "LastName": "Planberger",
-    "DiplayName": "Simon",
+    "DisplayName": "Simon",
     "GithubUsername": "planbsim",
     "Email": "simon.planberger@softaware.at",
     "VideoUrl": "https://link-to-video.com/simon-planberger.webm",
@@ -201,7 +201,7 @@
   {
     "FirstName": "Fabian",
     "LastName": "Rieder",
-    "DiplayName": "Fabian",
+    "DisplayName": "Fabian",
     "GithubUsername": "fabianrieder",
     "Email": "fabian.rieder@softaware.at",
     "VideoUrl": "https://link-to-video.com/fabian.webm",
@@ -210,7 +210,7 @@
   {
     "FirstName": "Roman",
     "LastName": "Schacherl",
-    "DiplayName": "Roman",
+    "DisplayName": "Roman",
     "GithubUsername": "rschacherl",
     "Email": "roman.schacherl@softaware.at",
     "VideoUrl": "https://link-to-video.com/roman.webm",
@@ -219,7 +219,7 @@
   {
     "FirstName": "Daniel",
     "LastName": "Sklenitzka",
-    "DiplayName": "Daniel",
+    "DisplayName": "Daniel",
     "GithubUsername": "Skleni",
     "Email": "daniel.sklenitzka@softaware.at",
     "VideoUrl": "https://link-to-video.com/daniel-sklenitzka.webm",
