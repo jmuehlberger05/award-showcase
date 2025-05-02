@@ -5,7 +5,7 @@
     "DisplayName": "Jakob",
     "GithubUsername": "jmuehlberger05",
     "Email": "jakob.muehlberger@softaware.at",
-    "VideoUrl": "https://link-to-video.com/jakob.webm",
+    "VideoUrl": "no-video-provided",
     "Aliases": [
       "Jakob M.",
       "Jakob Muehlberger",
@@ -22,7 +22,7 @@
     "DisplayName": "Dominik",
     "GithubUsername": "0xDomi",
     "Email": "dominik.achleitner@softaware.at",
-    "VideoUrl": "https://link-to-video.com/dominik.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/dominik_a.webm",
     "Aliases": ["Dominik A.", "Dominik Achleitner", "Achleitner", "Dominik"]
   },
   {
@@ -31,7 +31,7 @@
     "DisplayName": "Michael A.",
     "GithubUsername": "manzFH",
     "Email": "michael.anzinger@softaware.at",
-    "VideoUrl": "https://link-to-video.com/michael-anzinger.webm",
+    "VideoUrl": "no-video-provided",
     "Aliases": [
       "Michael A.",
       "Michael Anzinger",
@@ -46,7 +46,7 @@
     "DisplayName": "Tobias",
     "GithubUsername": "tobiasberei",
     "Email": "tobias.berei@softaware.at",
-    "VideoUrl": "https://link-to-video.com/tobias.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/tobias.webm",
     "Aliases": ["Tobias B.", "Tobias Berei", "Berei", "Tobias", "Tobias B"]
   },
   {
@@ -55,7 +55,7 @@
     "DisplayName": "Oliver",
     "GithubUsername": "oliverbindreiter",
     "Email": "oliver.bindreiter@softaware.at",
-    "VideoUrl": "https://link-to-video.com/oliver.webm",
+    "VideoUrl": "no-video-provided",
     "Aliases": [
       "Oliver B.",
       "Oliver Bindreiter",
@@ -70,7 +70,7 @@
     "DisplayName": "Jonas",
     "GithubUsername": "birklbauerjonas",
     "Email": "jonas.birklbauer@softaware.at",
-    "VideoUrl": "https://link-to-video.com/jonas.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/jonas.webm",
     "Aliases": [
       "Jonas B.",
       "Jonas Birklbauer",
@@ -85,7 +85,7 @@
     "DisplayName": "Nico",
     "GithubUsername": "bojernico",
     "Email": "nico.bojer@softaware.at",
-    "VideoUrl": "https://link-to-video.com/nico.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/nico.webm",
     "Aliases": ["Nico B.", "Nico Bojer", "Bojer", "Nico", "Nico B"]
   },
   {
@@ -94,7 +94,7 @@
     "DisplayName": "Markus",
     "GithubUsername": "mdi1984",
     "Email": "markus.dietrich@softaware.at",
-    "VideoUrl": "https://link-to-video.com/markus-dietrich.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/markus.webm",
     "Aliases": [
       "Markus D.",
       "Markus Dietrich",
@@ -109,7 +109,7 @@
     "DisplayName": "Dominik D.",
     "GithubUsername": "doerrD",
     "Email": "dominik.doerr@softaware.at",
-    "VideoUrl": "https://link-to-video.com/dominik-doerr.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/dominik_d.webm",
     "Aliases": [
       "Dominik D.",
       "Dominik Doerr",
@@ -126,7 +126,7 @@
     "DisplayName": "Felix",
     "GithubUsername": "feberhard",
     "Email": "felix.eberhard@softaware.at",
-    "VideoUrl": "https://link-to-video.com/felix.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/felix.webm",
     "Aliases": ["Felix E.", "Felix Eberhard", "Eberhard", "Felix", "Felix E"]
   },
   {
@@ -135,7 +135,7 @@
     "DisplayName": "Michael E.",
     "GithubUsername": "meinsiedler",
     "Email": "michael.einsiedler@softaware.at",
-    "VideoUrl": "https://link-to-video.com/michael-einsiedler.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/michi.webm",
     "Aliases": [
       "Michael E.",
       "Michael Einsiedler",
@@ -150,7 +150,7 @@
     "DisplayName": "Kathi",
     "GithubUsername": "kathienz",
     "Email": "kathrin.enzenhofer@softaware.at",
-    "VideoUrl": "https://link-to-video.com/kathrin.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/kathi.webm",
     "Aliases": [
       "Kathrin E.",
       "Kathrin Enzenhofer",
@@ -165,7 +165,7 @@
     "DisplayName": "Anna",
     "GithubUsername": "",
     "Email": "anna.estermann@softaware.at",
-    "VideoUrl": "https://link-to-video.com/anna.webm",
+    "VideoUrl": "no-video-provided",
     "Aliases": ["Anna E.", "Anna Estermann", "Estermann", "Anna", "Anna E"]
   },
   {
@@ -174,7 +174,7 @@
     "DisplayName": "Manuel",
     "GithubUsername": "manuelfuchs",
     "Email": "manuel.fuchs@softaware.at",
-    "VideoUrl": "https://link-to-video.com/manuel-fuchs.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/manuel.webm",
     "Aliases": ["Manuel F.", "Manuel Fuchs", "Fuchs", "Manuel", "Manuel F"]
   },
   {
@@ -183,7 +183,7 @@
     "DisplayName": "Christoph",
     "GithubUsername": "ChriGa13",
     "Email": "christoph.gattermayr@softaware.at",
-    "VideoUrl": "https://link-to-video.com/christoph-gattermayr.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/christoph.webm",
     "Aliases": [
       "Christoph G.",
       "Christoph Gattermayr",
@@ -199,7 +199,7 @@
     "DisplayName": "Gabriele",
     "GithubUsername": "gkaeferboeck",
     "Email": "gabriele.kaeferboeck@softaware.at",
-    "VideoUrl": "https://link-to-video.com/gabriele.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/gabriele.webm",
     "Aliases": [
       "Gabriele K.",
       "Gabriele Kaeferboeck",
@@ -216,7 +216,7 @@
     "DisplayName": "Patrik",
     "GithubUsername": "pkim",
     "Email": "patrik.kimmeswenger@softaware.at",
-    "VideoUrl": "https://link-to-video.com/patrik.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/patrik.webm",
     "Aliases": [
       "Patrik K.",
       "Patrik Kimmeswenger",
@@ -231,7 +231,7 @@
     "DisplayName": "Philipp",
     "GithubUsername": "PendelinP",
     "Email": "philipp.pendelin@softaware.at",
-    "VideoUrl": "https://link-to-video.com/philipp.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/philipp.webm",
     "Aliases": [
       "Philipp P.",
       "Philipp Pendelin",
@@ -246,7 +246,7 @@
     "DisplayName": "Simon",
     "GithubUsername": "planbsim",
     "Email": "simon.planberger@softaware.at",
-    "VideoUrl": "https://link-to-video.com/simon-planberger.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/simon.webm",
     "Aliases": [
       "Simon P.",
       "Simon Planberger",
@@ -261,7 +261,7 @@
     "DisplayName": "Fabian",
     "GithubUsername": "fabianrieder",
     "Email": "fabian.rieder@softaware.at",
-    "VideoUrl": "https://link-to-video.com/fabian.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/fabian.webm",
     "Aliases": ["Fabian R.", "Fabian Rieder", "Rieder", "Fabian", "Fabian R"]
   },
   {
@@ -270,7 +270,7 @@
     "DisplayName": "Roman",
     "GithubUsername": "rschacherl",
     "Email": "roman.schacherl@softaware.at",
-    "VideoUrl": "https://link-to-video.com/roman.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/roman.webm",
     "Aliases": ["Roman S.", "Roman Schacherl", "Schacherl", "Roman", "Roman S"]
   },
   {
@@ -279,7 +279,7 @@
     "DisplayName": "Daniel",
     "GithubUsername": "Skleni",
     "Email": "daniel.sklenitzka@softaware.at",
-    "VideoUrl": "https://link-to-video.com/daniel-sklenitzka.webm",
+    "VideoUrl": "https://storageheroboard.blob.core.windows.net/videos/heroes/daniel.webm",
     "Aliases": [
       "Daniel S.",
       "Daniel Sklenitzka",
