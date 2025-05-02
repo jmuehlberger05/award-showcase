@@ -222,9 +222,9 @@ function HeroSlideContainer({
     const initSlide = async () => {
       console.log("Initializing Slide ", slideID);
       const splits = await initSplitType(
-        toIdString("#title", data.achievement.title),
-        toIdString("#hero", data.hero.name),
-        toIdString("#details", data.achievement.details.title)
+        toIdString("#title", data.Achievement.Title),
+        toIdString("#hero", data.Hero.Name),
+        toIdString("#details", data.Achievement.Details.Title)
       );
       initTimeLine(splits);
     };
@@ -259,25 +259,25 @@ function HeroSlideContainer({
       style={returnAnimationStateStyles(animationState)}
     >
       <HeroSlide
-        foregroundVideo={{ url: data.hero.video, ref: foregroundVideoRef }}
+        foregroundVideo={{ url: data.Hero.VideoUrl, ref: foregroundVideoRef }}
         backgroundVideo={{
-          url: data.achievement.video,
+          url: data.Achievement.VideoUrl,
           ref: backgroundVideoRef,
         }}
         slideId={slideID}
       />
       <SlideUpDescription
         hero={{
-          text: data.hero.name,
-          id: toIdString("hero", data.hero.name),
+          text: data.Hero.Name,
+          id: toIdString("hero", data.Hero.Name),
         }}
         title={{
-          text: data.achievement.title,
-          id: toIdString("title", data.achievement.title),
+          text: data.Achievement.Title,
+          id: toIdString("title", data.Achievement.Title),
         }}
         details={{
-          text: data.achievement.details.title,
-          id: toIdString("details", data.achievement.details.title),
+          text: data.Achievement.Details.Title,
+          id: toIdString("details", data.Achievement.Details.Title),
         }}
       />
     </div>

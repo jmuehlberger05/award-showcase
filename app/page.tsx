@@ -1,9 +1,10 @@
 import HeroPresentation from "@/components/HeroPresentation";
+import { DATA_URL } from "./lib/constants";
 
 export default function Home() {
   return (
     <main>
-      <HeroPresentation dataURL={process.env.HERO_DATA_URL!} />
+      <HeroPresentation dataURL={DATA_URL} />
     </main>
   );
 }

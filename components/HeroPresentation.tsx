@@ -6,15 +6,16 @@ import { useFetch } from "@/app/lib/hooks/useFetch";
 
 // * HeroDataDTO is the data structure that the API returns
 export type HeroDataDTO = {
-  hero: {
-    name: string;
-    video: string;
+  Hero: {
+    Name: string;
+    VideoUrl: string;
   };
-  achievement: {
-    title: string;
-    video: string;
-    details: {
-      title: string;
+  Achievement: {
+    Title: string;
+    VideoUrl: string;
+    Details: {
+      Title: string;
+      Metric: string;
     };
   };
 };
@@ -24,12 +25,12 @@ export type AnimationState = "nextInLine" | "active" | "inactive";
 
 function HeroPresentation({ dataURL }: { dataURL: string }) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const { data, loading } = useFetch<HeroDataDTO[]>(dataURL);
+  const { data, loading } = useFetch<{ data: HeroDataDTO[] }>(dataURL);
 
   // * Increment Slide and infinite loop
   const incrementSlide = () => {
     if (loading) return;
-    setCurrentSlide((prev) => (prev + 1) % data!.length);
+    setCurrentSlide((prev) => (prev + 1) % data!.data.length);
   };
 
   // * Get Animation State for each slide
@@ -39,7 +40,7 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     }
     if (index === currentSlide) {
       return "active";
-    } else if (index === (currentSlide + 1) % data!.length) {
+    } else if (index === (currentSlide + 1) % data!.data.length) {
       return "nextInLine";
     } else {
       return "inactive";
@@ -54,7 +55,7 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
         </div>
       )}
       {data &&
-        data.map((item, index) => (
+        data.data.map((item, index) => (
           <HeroSlideContainer
             key={index}
             data={item}

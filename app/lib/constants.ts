@@ -1,1 +1,1 @@
-export const DATA_URL = "/data/data.json";
+export const DATA_URL = "/api/getherodata";
