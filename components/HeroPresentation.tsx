@@ -50,7 +50,7 @@ function HeroPresentation({ dataURL }: { dataURL: string }) {
     <div>
       {loading && (
         <div className="flex justify-center items-center h-screen">
-          <h1 className="text-2xl font-bold">Loading...</h1>
+          <h1 className="text-2xl font-bold">Heroboard is Loading...</h1>
         </div>
       )}
       {data &&

@@ -164,7 +164,7 @@ function HeroSlideContainer({
         timeline?.resume();
       }, 30);
     }
-  }, [animationState, timeline]);
+  }, [animationState, timeline, slideID]);
 
   // * Start a video from the beginning
   const startVideo = (videoRef: React.RefObject<HTMLVideoElement>) => {
