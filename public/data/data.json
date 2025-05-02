@@ -2,11 +2,11 @@
   {
     "hero": {
       "name": "Felix",
-      "video": "/videos/people/felix.webm"
+      "video": "https://storageheroboard.blob.core.windows.net/videos/heroes/felix.webm"
     },
     "achievement": {
       "title": "Maradonna",
-      "video": "/videos/stock/football.mp4",
+      "video": "https://storageheroboard.blob.core.windows.net/videos/achievements/kickertool-1-maradonna.webm",
       "details": {
         "title": "95% Gewinnrate beim Wuzzln"
       }
