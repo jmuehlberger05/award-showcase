@@ -279,6 +279,10 @@ function HeroSlideContainer({
           text: data.Achievement.Details.Title,
           id: toIdString("details", data.Achievement.Details.Title),
         }}
+        metric={{
+          text: data.Achievement.Details.Metric,
+          id: toIdString("metric", data.Achievement.Details.Metric),
+        }}
       />
     </div>
   );

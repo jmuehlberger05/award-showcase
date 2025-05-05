@@ -6,6 +6,7 @@ interface SlideUpDescriptionProps {
   title: DescriptionElement;
   hero: DescriptionElement;
   details: DescriptionElement;
+  metric: DescriptionElement;
 }
 
 type DescriptionElement = {
@@ -13,7 +14,12 @@ type DescriptionElement = {
   id: string;
 };
 
-function SlideUpDescription({ title, hero, details }: SlideUpDescriptionProps) {
+function SlideUpDescription({
+  title,
+  hero,
+  details,
+  metric,
+}: SlideUpDescriptionProps) {
   return (
     <div>
       <div className="absolute inset-0 text-white z-100">
@@ -35,10 +41,15 @@ function SlideUpDescription({ title, hero, details }: SlideUpDescriptionProps) {
           </div>
         </div>
         <div className="absolute right-10 bottom-14 z-10">
-          <div className="overflow-hidden">
-            <p className="text-[2vw] w-fit" id={details.id}>
+          <div className="overflow-hidden" id={details.id}>
+            <p className="text-[2vw] w-fit" /* id={details.id} */>
               {details.text}
+              <br />
+              {metric.text}
             </p>
+            {/* <p className="text-[2vw] w-fit" id={metric.id}>
+              
+            </p> */}
           </div>
         </div>
       </div>
