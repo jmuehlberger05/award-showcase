@@ -12,9 +12,10 @@ export const toKebabCase = (str: string): string => {
 /**
  * @param base Base String
  * @param value Value String
+ * @param id ID Number
  * @returns String in ID format
- * @example toIdString("#base", "Value Example") => "#base-value-example"
+ * @example toIdString("#base", "Value Example", 13) => "#base-value-example-13"
  */
-export const toIdString = (base: string, value: string): string => {
-  return `${base}-${toKebabCase(value)}`;
+export const toIdString = (base: string, value: string, id: number): string => {
+  return `${base}-${toKebabCase(value)}-${id}`;
 };

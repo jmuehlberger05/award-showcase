@@ -222,9 +222,9 @@ function HeroSlideContainer({
     const initSlide = async () => {
       console.log("Initializing Slide ", slideID);
       const splits = await initSplitType(
-        toIdString("#title", data.Achievement.Title),
-        toIdString("#hero", data.Hero.Name),
-        toIdString("#details", data.Achievement.Details.Title)
+        toIdString("#title", data.Achievement.Title, slideID),
+        toIdString("#hero", data.Hero.Name, slideID),
+        toIdString("#details", data.Achievement.Details.Title, slideID)
       );
       initTimeLine(splits);
     };
@@ -269,19 +269,19 @@ function HeroSlideContainer({
       <SlideUpDescription
         hero={{
           text: data.Hero.Name,
-          id: toIdString("hero", data.Hero.Name),
+          id: toIdString(`hero`, data.Hero.Name, slideID),
         }}
         title={{
           text: data.Achievement.Title,
-          id: toIdString("title", data.Achievement.Title),
+          id: toIdString("title", data.Achievement.Title, slideID),
         }}
         details={{
           text: data.Achievement.Details.Title,
-          id: toIdString("details", data.Achievement.Details.Title),
+          id: toIdString("details", data.Achievement.Details.Title, slideID),
         }}
         metric={{
           text: data.Achievement.Details.Metric,
-          id: toIdString("metric", data.Achievement.Details.Metric),
+          id: toIdString("metric", data.Achievement.Details.Metric, slideID),
         }}
       />
     </div>
