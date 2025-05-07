@@ -6,10 +6,9 @@ import { useFetch } from "@/app/lib/hooks/useFetch";
 
 // * HeroDataDTO is the data structure that the API returns
 export type HeroDataDTO = {
-  Hero: {
-    Name: string;
-    VideoUrl: string;
-  };
+  Name: string;
+  VideoUrl: string;
+
   Achievement: {
     Title: string;
     VideoUrl: string;

@@ -223,7 +223,7 @@ function HeroSlideContainer({
       console.log("Initializing Slide ", slideID);
       const splits = await initSplitType(
         toIdString("#title", data.Achievement.Title, slideID),
-        toIdString("#hero", data.Hero.Name, slideID),
+        toIdString("#hero", data.Name, slideID),
         toIdString("#details", data.Achievement.Details.Title, slideID)
       );
       initTimeLine(splits);
@@ -259,7 +259,7 @@ function HeroSlideContainer({
       style={returnAnimationStateStyles(animationState)}
     >
       <HeroSlide
-        foregroundVideo={{ url: data.Hero.VideoUrl, ref: foregroundVideoRef }}
+        foregroundVideo={{ url: data.VideoUrl, ref: foregroundVideoRef }}
         backgroundVideo={{
           url: data.Achievement.VideoUrl,
           ref: backgroundVideoRef,
@@ -268,8 +268,8 @@ function HeroSlideContainer({
       />
       <SlideUpDescription
         hero={{
-          text: data.Hero.Name,
-          id: toIdString(`hero`, data.Hero.Name, slideID),
+          text: data.Name,
+          id: toIdString(`hero`, data.Name, slideID),
         }}
         title={{
           text: data.Achievement.Title,
