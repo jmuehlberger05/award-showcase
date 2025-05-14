@@ -258,6 +258,9 @@ function HeroSlideContainer({
       className="h-dvh w-full fixed overflow-hidden isolate transition-transform duration-500"
       style={returnAnimationStateStyles(animationState)}
     >
+      <p className="absolute text-2xl font-bold text-white top-4 right-4 z-10">
+        {data.Achievement.Details.DateRange}
+      </p>
       <HeroSlide
         foregroundVideo={{ url: data.VideoUrl, ref: foregroundVideoRef }}
         backgroundVideo={{

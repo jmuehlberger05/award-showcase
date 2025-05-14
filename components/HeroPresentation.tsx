@@ -8,15 +8,16 @@ import { useFetch } from "@/app/lib/hooks/useFetch";
 export type HeroDataDTO = {
   Name: string;
   VideoUrl: string;
-
   Achievement: {
     Title: string;
     VideoUrl: string;
     Details: {
       Title: string;
       Metric: string;
+      DateRange: string;
     };
   };
+  LatestChange: string;
 };
 
 // * Animation State for each slide
